@@ -1,0 +1,98 @@
+:root {
+  /* Paleta de cores do material design: https://www.materialpalette.com/grey/blue-grey */
+  --dark-primary-color: #616161;
+  --light-primary-color: #F5F5F5;
+  --primary-color: #9E9E9E;
+  --text-icons: #212121;
+  --accent-color: #607D8B;
+  --primary-text: #212121;
+  --secondary-text: #757575;
+  --divider-color: #BDBDBD;
+}
+
+/** @todo: implementar tema dark e light */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--light-primary-color);
+  color: var(--primary-text);
+}
+
+.navbar {
+  background-color: var(--dark-primary-color);
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.navbar a {
+  color: var(--light-primary-color);
+  margin-right: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a.active {
+  color: var(--accent-color);
+}
+
+.navbar a:hover {
+  color: var(--accent-color);
+}
+
+.container {
+  padding: 2rem;
+  min-height: calc(100vh - 160px);
+}
+
+.button {
+  background-color: var(--accent-color);
+  color: var(--light-primary-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+}
+
+.button:hover {
+  background-color: var(--primary-color);
+}
+
+.input {
+  padding: 0.5rem;
+  border: 1px solid var(--divider-color);
+  border-radius: 4px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.list-item {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--divider-color);
+}
+
+.footer {
+  background-color: var(--dark-primary-color);
+  color: var(--light-primary-color);
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar a {
+    margin-bottom: 0.5rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+}
